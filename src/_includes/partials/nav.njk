@@ -1,0 +1,54 @@
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="./" class="nav-logo" aria-label="AI Current Home">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                <rect width="56" height="56" rx="8" fill="currentColor"/>
+                <text x="28" y="36" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-weight="700" font-size="18">AC</text>
+            </svg>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <div class="nav-menu" id="nav-menu">
+            <a href="./" class="nav-link">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-link dropdown-toggle" aria-expanded="false">
+                    Publications <span class="dropdown-arrow">▾</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./category/industry" class="dropdown-link">Industry News</a>
+                    <a href="./category/research" class="dropdown-link">Research</a>
+                    <a href="./category/regulation" class="dropdown-link">Regulation</a>
+                </div>
+            </div>
+            <a href="./resources" class="nav-link">Resources</a>
+            <a href="./about" class="nav-link">About</a>
+        </div>
+        
+        <!-- Right Side -->
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <button class="subscribe-btn">Subscribe</button>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu">
+            <a href="./" class="mobile-nav-link">Home</a>
+            <a href="./category/industry" class="mobile-nav-link">Industry News</a>
+            <a href="./category/research" class="mobile-nav-link">Research</a>
+            <a href="./category/regulation" class="mobile-nav-link">Regulation</a>
+            <a href="./resources" class="mobile-nav-link">Resources</a>
+            <a href="./about" class="mobile-nav-link">About</a>
+            <button class="mobile-subscribe-btn">Subscribe</button>
+        </div>
+    </div>
+</nav>

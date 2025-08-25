@@ -1,0 +1,46 @@
+{
+  "openai": {
+    "name": "OpenAI",
+    "description": "News and updates from OpenAI"
+  },
+  "google": {
+    "name": "Google",
+    "description": "Google AI developments and announcements"
+  },
+  "gpt6": {
+    "name": "GPT-6",
+    "description": "OpenAI's GPT-6 model coverage"
+  },
+  "gemini": {
+    "name": "Gemini",
+    "description": "Google's Gemini AI model"
+  },
+  "multimodal": {
+    "name": "Multimodal AI",
+    "description": "AI systems processing multiple types of data"
+  },
+  "ai-models": {
+    "name": "AI Models",
+    "description": "Large language models and AI architectures"
+  },
+  "competition": {
+    "name": "Competition",
+    "description": "Competitive dynamics in the AI industry"
+  },
+  "eu-ai-act": {
+    "name": "EU AI Act",
+    "description": "European Union AI regulation"
+  },
+  "regulation": {
+    "name": "Regulation",
+    "description": "AI policy and regulatory developments"
+  },
+  "compliance": {
+    "name": "Compliance",
+    "description": "AI compliance and legal requirements"
+  },
+  "policy": {
+    "name": "Policy",
+    "description": "AI policy and governance"
+  }
+}

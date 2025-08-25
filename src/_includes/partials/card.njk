@@ -1,0 +1,47 @@
+<article class="article-card">
+    <div class="card-image">
+        <img 
+            src="{{ post.data.image or './assets/default.jpg' }}" 
+            alt="{{ post.data.title }}"
+            loading="lazy"
+            width="400"
+            height="225"
+        >
+    </div>
+    
+    <div class="card-content">
+        <div class="card-meta">
+            <span class="category-pill" style="background-color: {{ post.data.category | categoryColor }}">
+                {{ categories[post.data.category].name }}
+            </span>
+        </div>
+        
+        <h3 class="card-title">
+            <a href="{{ post.url }}">{{ post.data.title }}</a>
+        </h3>
+        
+        {% if post.data.summary %}
+        <p class="card-summary">
+            <em>PLUS:</em> <strong>{{ post.data.summary }}</strong>
+        </p>
+        {% endif %}
+        
+        <div class="card-footer">
+            <div class="author-info">
+                <img 
+                    src="./assets/{{ authors[post.data.author].avatar or 'default-avatar.svg' }}" 
+                    alt="{{ authors[post.data.author].name }}"
+                    class="author-avatar"
+                    width="24"
+                    height="24"
+                >
+                <span class="author-name">{{ authors[post.data.author].name }}</span>
+            </div>
+            
+            <div class="card-meta-info">
+                <time datetime="{{ post.data.date | dateISO }}">{{ post.data.date | dateFormat }}</time>
+                <span class="reading-time">{{ post.data.readingTime or (post.templateContent | readingTime) }} min read</span>
+            </div>
+        </div>
+    </div>
+</article>

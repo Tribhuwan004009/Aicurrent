@@ -1,0 +1,14 @@
+{
+  "rowan-cheung": {
+    "name": "Rowan Cheung",
+    "title": "AI Industry Analyst",
+    "bio": "Leading voice in artificial intelligence with over 8 years covering emerging technologies, startups, and industry trends. Former tech journalist at TechCrunch and The Information.",
+    "avatar": "rowan-avatar.jpg",
+    "email": "rowan@aicurrent.com",
+    "social": {
+      "twitter": "@rowancheung",
+      "linkedin": "rowan-cheung"
+    },
+    "expertise": ["AI/ML", "Startups", "Tech Policy", "Industry Analysis"]
+  }
+}

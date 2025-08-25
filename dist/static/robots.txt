@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://aicurrent.netlify.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_redirects
+Disallow: /netlify.toml
+
+# Allow search engines to index RSS feed
+Allow: /rss.xml
+Allow: /sitemap.xml
+
+# Common crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

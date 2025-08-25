@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+---
+
+<!-- Hero Section -->
+{% include "partials/hero.njk" %}
+
+<!-- Search Bar -->
+<section class="search-section">
+    <div class="container">
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Search articles..." 
+                class="search-input"
+                aria-label="Search articles"
+            >
+            <div id="search-results" class="search-results hidden"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Articles Grid -->
+<section class="articles-section">
+    <div class="container">
+        <div class="articles-grid" id="articles-grid">
+            {% for post in collections.posts | limit(9) %}
+                {% include "partials/card.njk" %}
+            {% endfor %}
+        </div>
+        
+        <!-- Pagination -->
+        <nav class="pagination" aria-label="Article pagination">
+            <a href="#" class="pagination-link disabled">First</a>
+            <a href="#" class="pagination-link disabled">‹ Prev</a>
+            <span class="pagination-current">1</span>
+            <a href="#" class="pagination-link disabled">Next ›</a>
+            <a href="#" class="pagination-link disabled">Last</a>
+        </nav>
+    </div>
+</section>

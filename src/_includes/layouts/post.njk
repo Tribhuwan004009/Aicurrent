@@ -1,0 +1,74 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="post-article">
+    <div class="container">
+        <header class="post-header">
+            <div class="post-meta">
+                <span class="category-pill" style="background-color: {{ category | categoryColor }}">
+                    {{ categories[category].name }}
+                </span>
+                <time datetime="{{ date | dateISO }}">{{ date | dateFormat }}</time>
+                <span class="reading-time">{{ content | readingTime }} min read</span>
+            </div>
+            
+            <h1 class="post-title">{{ title }}</h1>
+            
+            {% if summary %}
+            <p class="post-summary">{{ summary }}</p>
+            {% endif %}
+            
+            <div class="post-author">
+                <img 
+                    src="./assets/{{ authors[author].avatar }}" 
+                    alt="{{ authors[author].name }}"
+                    class="author-avatar"
+                    width="40"
+                    height="40"
+                >
+                <div class="author-info">
+                    <span class="author-name">{{ authors[author].name }}</span>
+                    <span class="author-title">{{ authors[author].title }}</span>
+                </div>
+            </div>
+        </header>
+        
+        {% if image %}
+        <div class="post-image">
+            <img 
+                src="{{ image }}" 
+                alt="{{ title }}"
+                loading="lazy"
+                width="800"
+                height="450"
+            >
+        </div>
+        {% endif %}
+        
+        <div class="post-content">
+            {{ content | safe }}
+            
+            {% if plusContent %}
+            <div class="plus-content">
+                <h3>PLUS:</h3>
+                <p><strong>{{ plusContent }}</strong></p>
+            </div>
+            {% endif %}
+        </div>
+        
+        <footer class="post-footer">
+            <div class="post-tags">
+                {% for tag in tags %}
+                <span class="tag">#{{ tag }}</span>
+                {% endfor %}
+            </div>
+            
+            <div class="post-share">
+                <span>Share:</span>
+                <a href="https://twitter.com/intent/tweet?text={{ title | urlencode }}&url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener">Twitter</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+</article>
